@@ -29,7 +29,7 @@ You can install "pytest-expect-test" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-Start by writing your test, printing out any interesting output, and then calling `expect` with an empty string
+Start by writing your test, printing out any interesting output, and then calling expect with an empty string
 
 .. code-block:: python
             
@@ -72,6 +72,7 @@ Our test will then be updated to look like:
         expect("""\
     [1, 6, 15]
     """)
+
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
