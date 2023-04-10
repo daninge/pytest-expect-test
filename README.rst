@@ -16,22 +16,7 @@ pytest-expect-test
 
 A fixture to support expect tests (golden tests) in pytest
 
-----
-
-This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
-
-
-Features
---------
-
-* TODO
-
-
-Requirements
-------------
-
-* TODO
-
+This code was mostly copied from `ezyang/expecttest <https://github.com/ezyang/expecttest>`_ who wrote an implementation for unittest.
 
 Installation
 ------------
@@ -44,8 +29,49 @@ You can install "pytest-expect-test" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-* TODO
+Start by writing your test, printing out any interesting output, and then calling `expect` with an empty string
 
+.. code-block:: python
+            
+    # Function we are testing
+    def cumulative_sum(nums):
+        cum_sum = 0
+        result = []
+        for num in nums:
+            result.append(num+cum_sum)
+            cum_sum += num
+        return result
+
+
+    def test_simple(expect):
+        print(cumulative_sum([2, 3, 5]))
+        expect("""""")
+        print(cumulative_sum([1, 5, 9]))
+        expect("""""")
+        
+Then run::
+
+    $ pytest
+
+Note that the test fails because we expected nothing to be printed (e.g. we passed an empty string to the expect function), but there was some text that was printed.
+
+We can automatically fix these tests by running::
+
+    $ EXPECTTEST_ACCEPT=1 pytest
+
+Our test will then be updated to look like:
+
+.. code-block:: python
+
+    def test_simple(expect):
+        print(cumulative_sum([2, 3, 5]))
+        expect("""\
+    [2, 5, 10]
+    """)
+        print(cumulative_sum([1, 5, 9]))
+        expect("""\
+    [1, 6, 15]
+    """)
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
@@ -56,6 +82,8 @@ License
 
 Distributed under the terms of the `MIT`_ license, "pytest-expect-test" is free and open source software
 
+
+This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
 
 Issues
 ------
