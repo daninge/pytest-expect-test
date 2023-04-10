@@ -45,11 +45,6 @@ Usage
 -----
 
 .. code-block:: python
-    def fibonacci(n):
-        if n = 0:
-            return 1
-        else:
-            return [n] + fibonacci(n-1)
             
     def test_simple_pytest_test(expect):
         print("some stuff")
