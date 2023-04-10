@@ -44,22 +44,28 @@ You can install "pytest-expect-test" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-```
-def test_simple(expect):
-    print("some stuff")
-    print('hello')
-    print('hi')
-    expect("""\
-some stuff
-hello
-hi
-""")
-    print('some more stuff')
-    print('hello')
-    expect("""\
-some more stuff
-hello
-""")```
+.. code-block:: python
+    def fibonacci(n):
+        if n = 0:
+            return 1
+        else:
+            return [n] + fibonacci(n-1)
+            
+    def test_simple_pytest_test(expect):
+        print("some stuff")
+        print('hello')
+        print('hi')
+        expect("""\
+    some stuff
+    hello
+    hi
+    """)
+        print('some more stuff')
+        print('hello')
+        expect("""\
+    some more stuff
+    hello
+    """)
 
 Contributing
 ------------
