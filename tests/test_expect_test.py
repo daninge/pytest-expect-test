@@ -1,15 +1,18 @@
+def cumulative_sum(nums):
+    cum_sum = 0
+    result = []
+    for num in nums:
+        result.append(num+cum_sum)
+        cum_sum += num
+    return result
+
+
 def test_simple(expect):
-    print("some stuff")
-    print('hello')
-    print('hi')
+    print(cumulative_sum([2, 3, 5]))
     expect("""\
-some stuff
-hello
-hi
+[2, 5, 10]
 """)
-    print('some more stuff')
-    print('hello')
+    print(cumulative_sum([1, 5, 9]))
     expect("""\
-some more stuff
-hello
+[1, 6, 15]
 """)
