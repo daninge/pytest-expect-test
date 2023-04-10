@@ -16,7 +16,7 @@ pytest-expect-test
 
 A fixture to support expect tests (golden tests) in pytest
 
-This code was almost entirely copied from [ezyang/expecttest](https://github.com/ezyang/expecttest) which is a unittest implementation of the same thing
+This code was mostly copied from `ezyang/expecttest <https://github.com/ezyang/expecttest>`_ who wrote an implementation for unittest.
 
 Installation
 ------------
