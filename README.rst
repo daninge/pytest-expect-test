@@ -59,7 +59,7 @@ We can automatically fix these tests by running::
 
     $ EXPECTTEST_ACCEPT=1 pytest
 
-Our test will then be updated to look like:
+Our test will then be updated automatically so that it passes:
 
 .. code-block:: python
 
