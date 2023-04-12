@@ -43,7 +43,7 @@ Start by writing your test, printing out any interesting output, and then callin
         return result
 
 
-    def test_simple(expect):
+    def test_cumulative_sum(expect):
         print(cumulative_sum([2, 3, 5]))
         expect("""""")
         print(cumulative_sum([1, 5, 9]))
@@ -63,7 +63,7 @@ Our test will then be updated to look like:
 
 .. code-block:: python
 
-    def test_simple(expect):
+    def test_cumulative_sum(expect):
         print(cumulative_sum([2, 3, 5]))
         expect("""\
     [2, 5, 10]
