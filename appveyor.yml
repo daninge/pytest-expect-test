@@ -11,12 +11,10 @@ environment:
     - TOXENV: py311
     - TOXENV: py312
 
-init:
-  - py -VV
-  - py -c "import struct;print( 8 * struct.calcsize(\'P\'))"
-  - py --list  # What Python versions are installed?
-
 install:
+  - py -VV
+  - py -c "import struct ; print( 8 * struct.calcsize('P'))"
+  - py --list  # What Python versions are installed?
   - py -m pip install --upgrade pip
   - py -m pip install build tox wheel
 
