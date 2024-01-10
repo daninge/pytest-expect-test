@@ -10,7 +10,7 @@ pytest-expect-test
     :target: https://pypi.org/project/pytest-expect-test
     :alt: Python versions
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/daninge98/pytest-expect-test?branch=master
+.. image:: https://ci.appveyor.com/api/projects/status/github/daninge/pytest-expect-test-qfsuo?branch=master
     :target: https://ci.appveyor.com/project/daninge98/pytest-expect-test/branch/master
     :alt: See Build Status on AppVeyor
 
