@@ -1,13 +1,12 @@
-
-import warnings
 import ast
 import os
 import re
 import string
 import sys
 import traceback
+from typing import Dict, List, Match, Tuple
+
 import pytest
-from typing import Any, Callable, Dict, List, Match, Tuple
 
 ACCEPT = os.getenv('EXPECTTEST_ACCEPT')
 
@@ -225,7 +224,7 @@ def expect(capsys):
 
                 EDIT_HISTORY.record_edit(fn, lineno, delta)
         else:
-            help_text = ("To accept the new output, re-run test with "
+            help_text = ("To accept the new output, re-run test with "  # noqa: F841
                          "envvar EXPECTTEST_ACCEPT=1 (we recommend "
                          "staging/committing your changes before doing this)")
             assert expected == actual
