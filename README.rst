@@ -6,11 +6,13 @@ pytest-expect-test
     :target: https://pypi.org/project/pytest-expect-test
     :alt: PyPI version
 
+
 .. image:: https://img.shields.io/pypi/pyversions/pytest-expect-test.svg
     :target: https://pypi.org/project/pytest-expect-test
     :alt: Python versions
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/daninge/pytest-expect-test-qfsuo?branch=main
+
+.. image:: https://ci.appveyor.com/api/projects/status/89vkts8il49rdh90/branch/main?svg=true
     :target: https://ci.appveyor.com/project/daninge98/pytest-expect-test-qfsuo/branch/main
     :alt: See Build Status on AppVeyor
 
